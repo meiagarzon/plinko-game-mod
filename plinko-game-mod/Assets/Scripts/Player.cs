@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
         {
             Vector3 position = transform.position;
             Quaternion rotation = transform.rotation;
-           activeDisc = Instantiate(disc, position, rotation);
+            activeDisc = Instantiate(disc, position, rotation);
             cameraFollow.FollowDisc(activeDisc);
         }
     }
