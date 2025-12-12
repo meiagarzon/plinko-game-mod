@@ -3,23 +3,23 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 1;
-    public GameObject hexagon;
+    public GameObject disc;
     public CameraFollow cameraFollow;
     private GameObject activeDisc;
 
     void Update()
     {
         Move();
-        DropHexagon();
+        DropDisc();
     }
 
-    void DropHexagon()
+    void DropDisc()
     {
         if (Input.GetButtonDown("Fire1") && activeDisc == null)
         {
             Vector3 position = transform.position;
             Quaternion rotation = transform.rotation;
-            activeDisc = Instantiate(hexagon, position, rotation);
+            activeDisc = Instantiate(disc, position, rotation);
             cameraFollow.FollowDisc(activeDisc);
         }
     }
